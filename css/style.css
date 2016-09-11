@@ -6,19 +6,87 @@
   position: fixed;
   top: 185px;
   right: 20px;
-  width: 40px;
+  width: 60px;
   z-index: 1;
 }
 
 #social a {
   display: block;
-  width: 40px;
+  width: 80px;
   height: 40px;
   background: yellow;
 }
 
+/* //// NAV ///// */
+#navbar {
+	position:fixed;
+	top: 185px;
+	left: 0px;
+	width:100px;
+	z-index: 1;
+}
+
+#navbar a{
+	display: block;
+	font-family: Georgia;
+	font-weight: normal;
+	line-height: 1.5em;
+	padding-left:20px;
+	width: 120px;
+	color: #333;
+	background: #eee;
+	text-decoration: none;
+}
+
+#navbar a:hover {
+	color:white;
+	background: #333;
+}
+
+/* //////// BACKGROUND ///// */
+.background {
+	background: url(../images/shiplap.jpg) no-repeat center top;
+ 	background-size: cover;
+}
+
+
 /* //////// LAYOUT //////*/
 .wrapper {
-  width: 960px;
+  min-width: 600px;
+  max-width:960px;
   margin: 0 auto;
 }
+
+header {
+	font-family: Georgia;
+	margin: 0 0 30px;
+	background-color: rgba(253, 253, 253, .7);
+}
+
+section {
+  padding: 30px;
+  margin-bottom: 20px;
+  background: white;
+}
+
+/*////////// FIXES //////////*/
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
+}
+
+.clear {
+  clear:both;
+}
+
