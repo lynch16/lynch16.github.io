@@ -1,4 +1,7 @@
 /* ///// GLOBAL //////*/
+body {
+	margin: 0;
+}
 
 h1 {
 	margin: 0; /*make header touch top of page*/
