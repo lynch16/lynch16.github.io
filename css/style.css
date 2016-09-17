@@ -1,94 +1,115 @@
 /* ///// GLOBAL //////*/
-body {
-	margin: 0;
+.block_links h3+p a {
+	display: block;
+}
+.shadow{
+	box-shadow: 0 3px 10px #333;
 }
 
-h1 {
-	margin: 0; /*make header touch top of page*/
-	padding: 20px 0 0;
-	font: Georgia, sans-serif;
-	color: #eee;
-	float: left;
-}
 
-h2 {
-	padding: 20px;
-	margin: 0;
-	font: 1.2em Georgia, sans-serif;
-	color: #eee;
-}
-
-h3 {
-  margin: 0 0 10px;
-  text-align: center;
-}
-
-header {
-	border-bottom: 2px solid white;
-}
-
-header a {
-	text-decoration: none;
-}
-
-section {
-  padding: 10px 30px;
-  margin: 20px 0;
-  background: white;
-}
-
-.border-right {
-  border-right: 1px dotted #333;
-  padding-right: 30px;
+footer {
+	text-align: center;
+	font-size: .75em;
+	padding: 10px;
+	background: #eee;
+	border-top: 1px solid;
 }
 
 /* //// SOCIAL /////*/
+@media only screen and (max-width: 768px) {
+	ul#social {
+		display: none;
+	}
+}
+
 #social {
-  position: fixed;
-  top: 185px;
-  right: 0px;
-  z-index: 1;
-  width: 42px;
-  height: 126px;
+	margin-top: 15px;
+}
+a.fbook, a.twit, a.ghub {
+	width: 40px;
+	height: 40px;
+	text-indent: 100%;
+	overflow: hidden;
+	background: url(../images/logos.png)
 }
 
-#social a {
-  display: block;
-  width: 42px;
-  height: 42px;
-  margin: 0px auto;
-  text-decoration: none;
+a.fbook { background-position: 0 0; }
+a.fbook:hover { background-position: 0 -40px; }
+
+a.twit { background-position: -40px  0; }
+a.twit:hover { background-position: -40px -40px; }
+
+a.ghub { background-position: -80px 0;}
+a.ghub:hover {background-position: -80px -40px;}
+
+/*///// MAIN CONTENT //// */
+
+#featured_content {
+  padding: 30px;
+  margin-bottom: 20px;
+  background: white;
 }
 
-#social a:hover {
-  border: 0px hidden black;
-  height: 43px;
-  padding: 1px 0;
+/* ////// DETAILS SECTION //////*/
+#details {
+	padding: 20px 0;
 }
 
-/* //// NAV ///// */
-#navbar {
-	position:fixed;
-	top: 185px;
-	left: 0px;
-	width:10%;
-	z-index: 1;
+#details h3 {
+	text-align: center;
 }
 
-#navbar a{
-	display: block;
-	font-family: Georgia;
-	font-weight: normal;
-	line-height: 1.5em;
-	padding-left:20px;
+#details [class*="col-"] {
+	height:150px;
+}
+
+#details .border{
+	border-right: 1px dotted #333;
+	padding-right: 20px
+}
+
+#details a {
 	color: #333;
 	text-decoration: none;
-	margin: 0;
 }
 
-#navbar a:hover {
-	color:white;
-	background: #333;
+#details a:hover {
+	text-decoration: underline;
+}
+
+@media only screen and (max-width: 768px) {
+	#details [class*="col-"] {
+		height: auto;
+	}
+
+	#details .border {
+		border-bottom: 1px dotted #333;
+	}
+
+	#details h3 {
+		text-align: left;
+		font-size: 1.5em;
+	}
+	#details #social {
+		width: auto;
+	}
+	#details #social a{
+		display: inline-block;
+	}
+	
+	#details #hide {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	#details #social {
+		visibility: hidden;
+	}
+
+	#details #hide a {
+		display: block;
+	}
 }
 
 /* //////// BACKGROUND ///// */
@@ -104,80 +125,30 @@ section {
 	background: linear-gradient(to bottom,  rgba(181,189,200,0.25) 0%,rgba(130,140,149,0.52) 36%,rgba(40,52,59,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40b5bdc8', endColorstr='#28343b',GradientType=0 ); /* IE6-9 */
 }
-
+.light-grey {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,e5e5e5+100;White+3D */
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+}
 .yellow {
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fefcea+0,f1da36+98&1+1,0.3+100 */
 	background: -moz-linear-gradient(top,  rgba(254,252,234,1) 0%, rgba(254,252,232,1) 1%, rgba(241,218,54,0.31) 98%, rgba(241,218,54,0.3) 100%); /* FF3.6-15 */
 	background: -webkit-linear-gradient(top,  rgba(254,252,234,1) 0%,rgba(254,252,232,1) 1%,rgba(241,218,54,0.31) 98%,rgba(241,218,54,0.3) 100%); /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(to bottom,  rgba(254,252,234,1) 0%,rgba(254,252,232,1) 1%,rgba(241,218,54,0.31) 98%,rgba(241,218,54,0.3) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#4df1da36',GradientType=0 ); /* IE6-9 */
-
 }
 
-/* //////// LAYOUT //////*/
-.wrapper {
-  width: 960px;
-  margin: 0 auto;
+/*/////// MEDIA ////////*/
+
+img, video, audio, iframe, table, form {
+  width: 100%; /* IE */
+  max-width: 100%; /* FF, Safari, Chrome */
 }
 
-.col-1 {
-	width: 32%;
-	float: left;
-}
-
-.col-2 {
-	width: 66%;
-	float: left;
-}
-
-.col-3 {
-
-}
-
-[class*="col-"] {
-  margin-left: 2%;
-}
-
-.first {
-	margin-left: 0%;
-}
-
-.col-1 a {
-	display: block;
-}
-
-footer {
-  text-align: center;
-  font-size: 0.75em;
-  padding: 5px;
-  background: #eee;
-  border-top: 1px solid #ccc;
-}
-
-/* /////// DETAILS ////// */
-#details {
-	border-top: 1px solid white;
-}
-
-#details div {
-	height: 150px;
-}
-
-#details a:link, #details a:visited {
-	color: black;
-	text-decoration: none;
-}
-
-#details a:hover {
-	text-decoration: underline;
-}
-
-#details p {
-	font-size: 1em;
-	line-height: 1.5em;
-}
-
-/*////////// FIXES //////////*/
+/* /////// FIXES /////// */
 
 * {
   -webkit-box-sizing: border-box;
