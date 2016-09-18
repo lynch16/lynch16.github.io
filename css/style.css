@@ -6,13 +6,35 @@
 	box-shadow: 0 3px 10px #333;
 }
 
+/* ///// CAROUSEL STYLES /////// */
+#carousel-example-generic .item img {
+  height: auto;
+}
 
-footer {
-	text-align: center;
-	font-size: .75em;
-	padding: 10px;
-	background: #eee;
-	border-top: 1px solid;
+.carousel-caption h3 {
+	text-shadow: 2px 2px #333;
+}
+
+.carousel-caption p {
+  display: none;
+  display: block;
+}
+
+@media only screen and (min-width: 768px) {
+  #carousel-example-generic .item img {
+    height: 384px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  #carousel-example-generic .item img {
+    height: 496px;
+  }
+
+@media only screen and (min-width: 1200px) {
+  #carousel-example-generic .item img {
+    height: 600px;
+  }
 }
 
 /* //// SOCIAL /////*/
@@ -48,6 +70,14 @@ a.ghub:hover {background-position: -80px -40px;}
   padding: 30px;
   margin-bottom: 20px;
   background: white;
+}
+
+footer {
+	text-align: center;
+	font-size: .75em;
+	padding: 10px;
+	background: #eee;
+	border-top: 1px solid;
 }
 
 /* ////// DETAILS SECTION //////*/
