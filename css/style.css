@@ -13,6 +13,7 @@
 
 .carousel-caption h3 {
 	text-shadow: 2px 2px #333;
+	font-size: 1em;
 }
 
 .carousel-caption p {
@@ -24,12 +25,11 @@
   #carousel-example-generic .item img {
     height: 384px;
   }
-}
 
-@media only screen and (min-width: 992px) {
-  #carousel-example-generic .item img {
-    height: 496px;
+  .carousel-caption h3{
+  	font-size: 2em;
   }
+}
 
 @media only screen and (min-width: 1200px) {
   #carousel-example-generic .item img {
