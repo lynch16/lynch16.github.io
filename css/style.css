@@ -72,6 +72,20 @@ a.ghub:hover {background-position: -80px -40px;}
   background: white;
 }
 
+#blog .archive {
+	border-left: 1px dotted black;
+}
+
+#blog a {
+	color: #333
+}
+
+#blog {
+  padding: 30px;
+  margin-bottom: 20px;
+  background: white;
+}
+
 footer {
 	text-align: center;
 	font-size: .75em;
