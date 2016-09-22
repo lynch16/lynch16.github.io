@@ -72,8 +72,8 @@ a.ghub:hover {background-position: -80px -40px;}
   background: white;
 }
 
-#blog .archive {
-	border-left: 1px dotted black;
+.blog_feed {
+	border-right: 1px dotted black;
 }
 
 #blog a {
