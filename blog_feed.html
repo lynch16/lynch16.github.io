@@ -21,7 +21,7 @@
   <body>
     <div class="background">
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-12" id="navigation">
                 <nav class="navbar navbar-default">
                   <div class="container-fluid">
                     <!-- Brand and toggle get grouped for better mobile display -->
@@ -56,7 +56,7 @@
             </div>
         </div> <!--navbar row-->
 
-        <div class="container"> 
+        <div class="container">
             <div class="row shadow" id="blog">
                 <div class="col-sm-9 blog_feed">
                     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
@@ -70,7 +70,21 @@
                         </div>
                         <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                           <div class="panel-body">
-                            <p>This project was the first Assessment of the Learn.co program.  The objective of the project was to create a CLI ruby gem that pulls data from an API or website to create list and detail views. </p>
+                            <p>
+                                This project was the first Assessment of the Learn.co program.  The objective of the project was to create a CLI ruby gem that pulls data from an API or website to create list and detail views. I took a look through the examples that were provided and thought that they were essentially all the same concept of finding a service near you through a popular website. I wanted to learn more about APIs so I took a different approach.
+                            </p>
+                            <p>
+                                Having studied climate change for my undergrad, I wanted to build something that I would find interesting, useful and expandable.  I decided to build a gem that uses the NOAA Climate API to display and compare average temperatures for where I lived.  I thought it would be interesting to be able to compare the average temperature of today to the year that I was born.  At least, that is where my process on this gem began.
+                            </p>
+                            <p>
+                                After searching through the NOAA Climate API for several hours, I realized that there were some limitations in getting the data that threatened the accuracy of my gem.  The API is limited to return a maximum of 1000 values per request.  I was at first going to compare yearly averages but because of this limit, I had to be more specific and compare average monthly temperatures. Once I had the API figured out, I created a blank ruby application to play around with different request variables and ways to access the values stored within the retrieved data.  The API returns a JSON string, which I parsed into a hash. The first key of the hash, by default, is labeled "results" conveniently enough. The value of results is an array of data points.  The data points are hashes themselves, the keys of which vary by request type.
+                            </p>
+                            <p>
+                                Once I figured all of this out, it was time to start building the actual app.  I used Bundler to set up the initial file and proceeded to work my way through the CLI class and then the NOAA Data class.  When I first started the CLI class, I put almost everything into two methods: one to welcome the user and take inputs, and one to interact with the NOAA Data class.  However, the more I built, the more I saw a need for more methods to try and stick with DRY principles.  The NOAA Data class was fairly simple to build since I had done so much work prior in testing out the API. Knowing that I needed a list view and detail view to complete my assignment, I decided to expand the app to cover every state in the U.S.. Now, the user is able to select from a list of supported states, enter a date, and return the average monthly temperature for that date.  Alternatively, users can decide to make a comparison between two data points, which is why I call it a tracker.  Of note, users can choose to forgo the list of states and just enter one from memory.  The option to view the list of states not only indicates what format the input expects, but also will update for any additions or deletions NOAA makes (i.e. adding Puerto Rico).
+                            </p>
+                            <p>
+                                I'm quite satisfied with the end product having met my initial goals of creating something useful, interesting, and expandable.  Future changes will add more functionality to how the user interacts with the NOAA API and save the results of queries to reduce having to query the same dataset twice.
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -121,7 +135,7 @@
                 <div class="col-sm-4 block_links">
                     <h3>Follow</h3>
                     <p>
-                        <div id="hide"> 
+                        <div id="hide">
                             <a href="http://twitter.com/wlynch16">Twitter</a>
                             <a href="http://facebook.com/wlynch91">Facebook</a>
                             <a href="http://github.com/lynch16">Github</a>
