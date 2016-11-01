@@ -64,27 +64,45 @@
                         <div class="panel-heading" role="tab" id="headingOne">
                           <h4 class="panel-title">
                             <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                              CLI Climate Tracker Ruby Gem
+                              Sinatra Web App
                             </a>
                           </h4>
                         </div>
                         <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                           <div class="panel-body">
-                            <p>
-                                This project was the first Assessment of the Learn.co program.  The objective of the project was to create a CLI ruby gem that pulls data from an API or website to create list and detail views. I took a look through the examples that were provided and thought that they were essentially all the same concept of finding a service near you through a popular website. I wanted to learn more about APIs so I took a different approach.
-                            </p>
-                            <p>
-                                Having studied climate change for my undergrad, I wanted to build something that I would find interesting, useful and expandable.  I decided to build a gem that uses the NOAA Climate API to display and compare average temperatures for where I lived.  I thought it would be interesting to be able to compare the average temperature of today to the year that I was born.  At least, that is where my process on this gem began.
-                            </p>
-                            <p>
-                                After searching through the NOAA Climate API for several hours, I realized that there were some limitations in getting the data that threatened the accuracy of my gem.  The API is limited to return a maximum of 1000 values per request.  I was at first going to compare yearly averages but because of this limit, I had to be more specific and compare average monthly temperatures. Once I had the API figured out, I created a blank ruby application to play around with different request variables and ways to access the values stored within the retrieved data.  The API returns a JSON string, which I parsed into a hash. The first key of the hash, by default, is labeled "results" conveniently enough. The value of results is an array of data points.  The data points are hashes themselves, the keys of which vary by request type.
-                            </p>
-                            <p>
-                                Once I figured all of this out, it was time to start building the actual app.  I used Bundler to set up the initial file and proceeded to work my way through the CLI class and then the NOAA Data class.  When I first started the CLI class, I put almost everything into two methods: one to welcome the user and take inputs, and one to interact with the NOAA Data class.  However, the more I built, the more I saw a need for more methods to try and stick with DRY principles.  The NOAA Data class was fairly simple to build since I had done so much work prior in testing out the API. Knowing that I needed a list view and detail view to complete my assignment, I decided to expand the app to cover every state in the U.S.. Now, the user is able to select from a list of supported states, enter a date, and return the average monthly temperature for that date.  Alternatively, users can decide to make a comparison between two data points, which is why I call it a tracker.  Of note, users can choose to forgo the list of states and just enter one from memory.  The option to view the list of states not only indicates what format the input expects, but also will update for any additions or deletions NOAA makes (i.e. adding Puerto Rico).
-                            </p>
-                            <p>
-                                I'm quite satisfied with the end product having met my initial goals of creating something useful, interesting, and expandable.  Future changes will add more functionality to how the user interacts with the NOAA API and save the results of queries to reduce having to query the same dataset twice.
-                            </p>
+                              <p>As part of my second assessment with Learn.co, I was tasked with creating a simple web app using Sinatra and ActiveRecord.  I wanted to make something usable in my day to day job, so I decided to create a loan management system to help track the different aspects of an SBA 504 loan.</p>
+                              <p>One of the requirements was that users can only modify the content that they create.  This doesn't really match the way that LMS systems work at my type of business, but I included it to pass the assessment.  When I revise this project to put it into use, I will most likely replace this feature with one that simply updates a "last user" variable.</p>
+                              <p>Putting the app together was quite straightforward since I had made several other Sinatra apps during the course of the program.  The biggest issue I had was actually setting the initial program to run with the correct dependencies.  I realzied that simply deleting the Gemfile.lock and created databases was the easiest approach to configuration.  I am also a little unsure of where to insert Rack::Flash as it doesn't seem to work when I put it in config.ru.  I put it in the ApplicationController class, which seems to work fine, but I'm not sure if this is convential.</p>
+                              <p>I felt comfortable enough after creating the app to create a layout.erb with css styling.  Adding the css styling was very difficult because I couldn't figure out how the app would read the css files. I did a bunch of research but most of it was very contradicting and didn't work for my application.  Eventually, I got it working by putting the css files in a subfolder of public called styles.  While this worked, I would have thought that putting it in a subfolder called css would work too, but it didnt.</p>
+                             <p>I'm pretty happy with how the app came out, but I would like to add more features once I learn Javascript, such as being able to sort the lists of entities and loans.                    </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                          <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              CLI Climate Tracker Ruby Gem
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                          <div class="panel-body">
+                              <p>
+                                  This project was the first Assessment of the Learn.co program.  The objective of the project was to create a CLI ruby gem that pulls data from an API or website to create list and detail views. I took a look through the examples that were provided and thought that they were essentially all the same concept of finding a service near you through a popular website. I wanted to learn more about APIs so I took a different approach.
+                              </p>
+                              <p>
+                                  Having studied climate change for my undergrad, I wanted to build something that I would find interesting, useful and expandable.  I decided to build a gem that uses the NOAA Climate API to display and compare average temperatures for where I lived.  I thought it would be interesting to be able to compare the average temperature of today to the year that I was born.  At least, that is where my process on this gem began.
+                              </p>
+                              <p>
+                                  After searching through the NOAA Climate API for several hours, I realized that there were some limitations in getting the data that threatened the accuracy of my gem.  The API is limited to return a maximum of 1000 values per request.  I was at first going to compare yearly averages but because of this limit, I had to be more specific and compare average monthly temperatures. Once I had the API figured out, I created a blank ruby application to play around with different request variables and ways to access the values stored within the retrieved data.  The API returns a JSON string, which I parsed into a hash. The first key of the hash, by default, is labeled "results" conveniently enough. The value of results is an array of data points.  The data points are hashes themselves, the keys of which vary by request type.
+                              </p>
+                              <p>
+                                  Once I figured all of this out, it was time to start building the actual app.  I used Bundler to set up the initial file and proceeded to work my way through the CLI class and then the NOAA Data class.  When I first started the CLI class, I put almost everything into two methods: one to welcome the user and take inputs, and one to interact with the NOAA Data class.  However, the more I built, the more I saw a need for more methods to try and stick with DRY principles.  The NOAA Data class was fairly simple to build since I had done so much work prior in testing out the API. Knowing that I needed a list view and detail view to complete my assignment, I decided to expand the app to cover every state in the U.S.. Now, the user is able to select from a list of supported states, enter a date, and return the average monthly temperature for that date.  Alternatively, users can decide to make a comparison between two data points, which is why I call it a tracker.  Of note, users can choose to forgo the list of states and just enter one from memory.  The option to view the list of states not only indicates what format the input expects, but also will update for any additions or deletions NOAA makes (i.e. adding Puerto Rico).
+                              </p>
+                              <p>
+                                  I'm quite satisfied with the end product having met my initial goals of creating something useful, interesting, and expandable.  Future changes will add more functionality to how the user interacts with the NOAA API and save the results of queries to reduce having to query the same dataset twice.
+                              </p>
                           </div>
                         </div>
                       </div>
