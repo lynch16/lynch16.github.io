@@ -61,16 +61,22 @@
                 <div class="col-sm-9 blog_feed">
                     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                       <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="headingOne">
+                        <div class="panel-heading" role="tab" id="headingThree">
                           <h4 class="panel-title">
-                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
                               Rails Assessment App
                             </a>
                           </h4>
                         </div>
-                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
                           <div class="panel-body">
-                              <p> </p>
+                            <p> For this assessment, I built an MVC to manage access to different machines that the Manchester Makerspace.  The Makerspace has officers that manage each of the workshops.  This app will allow them to set criteria for what a member needs to know before using the equipment and also sign off on those skills for different members. Also, it tracks the skill level so that members will know who to go to for help and relieve some of the burden on officers for signing everyone out on a skill. </p>
+                            <p>
+                              Because this app had so many parts, I created a workflow of how the tables are related and what actions everyone is allowed to access/edit.  Also, I had to add extra features to meet the assessment requirements.  Since I wanted to actually use this for the Makerspace, I spent a lot of time working on the layout of the forms.  One of the hardest ones was getting the nested checklists to display properly and then function properly. I actually ended up using a js script to dynamically add skills to a workshop to make it more convenient to mass asssign skills.
+                            </p>
+                            <p>
+                              The  hardest part about getting my app to work was setting up OmniAuth with Devise. I found several difference instructions but they were contridictory and apparently not up to date.  I was able to get it working for gMail quickly enough but the Slack oauth functionality was not as easy. Even the documentation on their site was not correct.  I eventually had to find clues from a recent update notice; for some reason, Slack didn't update the instructions that they direct you to.
+                            </p>
                           </div>
                         </div>
                       </div>
