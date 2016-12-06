@@ -59,12 +59,14 @@
         <div class="container">
             <div class="row shadow" id="blog">
                 <div class="col-sm-9">
-                    <h3>Sinatra Web App</h3>
-                         <p>As part of my second assessment with Learn.co, I was tasked with creating a simple web app using Sinatra and ActiveRecord.  I wanted to make something usable in my day to day job, so I decided to create a loan management system to help track the different aspects of an SBA 504 loan.</p>
-                         <p>One of the requirements was that users can only modify the content that they create.  This doesn't really match the way that LMS systems work at my type of business, but I included it to pass the assessment.  When I revise this project to put it into use, I will most likely replace this feature with one that simply updates a "last user" variable.</p>
-                         <p>Putting the app together was quite straightforward since I had made several other Sinatra apps during the course of the program.  The biggest issue I had was actually setting the initial program to run with the correct dependencies.  I realzied that simply deleting the Gemfile.lock and created databases was the easiest approach to configuration.  I am also a little unsure of where to insert Rack::Flash as it doesn't seem to work when I put it in config.ru.  I put it in the ApplicationController class, which seems to work fine, but I'm not sure if this is convential.</p>
-                         <p>I felt comfortable enough after creating the app to create a layout.erb with css styling.  Adding the css styling was very difficult because I couldn't figure out how the app would read the css files. I did a bunch of research but most of it was very contradicting and didn't work for my application.  Eventually, I got it working by putting the css files in a subfolder of public called styles.  While this worked, I would have thought that putting it in a subfolder called css would work too, but it didnt.</p>
-                        <p>I'm pretty happy with how the app came out, but I would like to add more features once I learn Javascript, such as being able to sort the lists of entities and loans.                    </p>
+                    <h3>Rails Assessment App</h3>
+                    <p> For this assessment, I built an MVC to manage access to different machines that the Manchester Makerspace.  The Makerspace has officers that manage each of the workshops.  This app will allow them to set criteria for what a member needs to know before using the equipment and also sign off on those skills for different members. Also, it tracks the skill level so that members will know who to go to for help and relieve some of the burden on officers for signing everyone out on a skill. </p>
+                    <p>
+                      Because this app had so many parts, I created a workflow of how the tables are related and what actions everyone is allowed to access/edit.  Also, I had to add extra features to meet the assessment requirements.  Since I wanted to actually use this for the Makerspace, I spent a lot of time working on the layout of the forms.  One of the hardest ones was getting the nested checklists to display properly and then function properly. I actually ended up using a js script to dynamically add skills to a workshop to make it more convenient to mass asssign skills.
+                    </p>
+                    <p>
+                      The  hardest part about getting my app to work was setting up OmniAuth with Devise. I found several difference instructions but they were contridictory and apparently not up to date.  I was able to get it working for gMail quickly enough but the Slack oauth functionality was not as easy. Even the documentation on their site was not correct.  I eventually had to find clues from a recent update notice; for some reason, Slack didn't update the instructions that they direct you to.
+                    </p>
                 </div>
                 <div class="col-sm-3">
                     <h4>Archives</h4>
